@@ -1,0 +1,14 @@
+Ramin Yazdani | Feedforward Neural Network Classifier | main | WIP(setup): Initialize repository with basic structure
+
+Set up the foundational repository structure with initial README and .gitignore configuration.
+This establishes the project identity and basic organization before implementing any code.
+
+Created files:
+- README.md: Initial project description outlining the feedforward neural network classifier
+- .gitignore: Python and Jupyter-specific ignore patterns to prevent committing artifacts
+
+This commit represents the first step in the development process, establishing a clean
+workspace and documenting the project's purpose. The README provides an overview of what
+will be built, while the .gitignore ensures only source files are tracked in version control.
+
+Verification: Repository structure is in place and ready for development.

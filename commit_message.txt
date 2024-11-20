@@ -1,14 +1,15 @@
-Ramin Yazdani | Feedforward Neural Network Classifier | main | WIP(setup): Initialize repository with basic structure
+Ramin Yazdani | Feedforward Neural Network Classifier | main | WIP(deps): Add Python dependencies
 
-Set up the foundational repository structure with initial README and .gitignore configuration.
-This establishes the project identity and basic organization before implementing any code.
+Defined the project's Python dependencies in requirements.txt to ensure reproducibility
+and clarify what packages are needed to run the implementation.
 
-Created files:
-- README.md: Initial project description outlining the feedforward neural network classifier
-- .gitignore: Python and Jupyter-specific ignore patterns to prevent committing artifacts
+Added dependencies:
+- torch: PyTorch framework for neural network implementation
+- numpy: Numerical computing for data generation
+- matplotlib: Visualization library for plots and decision boundaries
+- jupyter: Interactive notebook environment
 
-This commit represents the first step in the development process, establishing a clean
-workspace and documenting the project's purpose. The README provides an overview of what
-will be built, while the .gitignore ensures only source files are tracked in version control.
+This ensures anyone can reproduce the environment needed to run the project. Each dependency
+is pinned to ensure consistent behavior across different installations.
 
-Verification: Repository structure is in place and ready for development.
+Verification: requirements.txt created with all necessary dependencies listed.

@@ -1,18 +1,17 @@
-Ramin Yazdani | Feedforward Neural Network Classifier | main | WIP(data): Implement synthetic data generation
+Ramin Yazdani | Feedforward Neural Network Classifier | main | WIP(data): Implement PyTorch DataLoader infrastructure
 
-Created the initial notebook with data generation functionality for a 3-class classification
-problem with non-linearly separable boundaries. This is the foundation - understanding the
-problem before building a solution.
+Implemented PyTorch data handling infrastructure following framework best practices.
+This enables efficient batch processing and follows PyTorch conventions for dataset management.
 
 Key implementations:
-- Created feedforward_neural_network.ipynb notebook
-- Added necessary import statements (numpy, matplotlib, torch)
-- Implemented generate_data() function creating 3 spiral classes in 2D space
-- Added visualization plot showing the non-linear decision boundaries needed
+- Created PointsDataset class extending torch.utils.data.Dataset
+- Created PointsDataLoader class extending torch.utils.data.DataLoader
+- Added proper tensor conversions (numpy arrays → torch tensors)
+- Tested batch processing to ensure data flows correctly
 
-The synthetic data demonstrates why a simple linear classifier (perceptron) would fail and
-why we need a multi-layer feedforward network. The visualization clearly shows the three
-classes intertwined in a non-linearly separable pattern.
+Using PyTorch's Dataset and DataLoader abstractions makes the training code cleaner and
+enables features like shuffling, batching, and parallel data loading. This is a standard
+pattern in PyTorch development and makes the code more maintainable.
 
-Verification: Data generation works correctly and produces 300 points across 3 classes.
-Visualization shows expected spiral pattern confirming non-linear separability.
+Verification: DataLoader successfully creates batches from generated data. Batch shapes
+and types verified to be correct for neural network input.

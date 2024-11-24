@@ -4,20 +4,20 @@ A PyTorch implementation for multi-class classification using feedforward neural
 
 ## Progress
 
-✅ Data generation implemented
-✅ Visualization of dataset
-✅ PyTorch DataLoader implemented
+✅ Data generation and visualization
+✅ PyTorch DataLoader
+✅ 2-layer FFNN architecture
 
-## Implementation Details
+## Architecture
 
-- Custom `PointsDataset` class extending PyTorch Dataset
-- Custom `PointsDataLoader` for batch processing
-- Proper tensor conversions and data handling
+- Input layer: 2 features (2D space)
+- Hidden layer: Configurable size (ReLU activation)
+- Output layer: 3 classes (softmax)
 
 ## Next Steps
 
-- Implement neural network architecture
-- Build training loop
+- Implement training loop
+- Add visualization of decision boundaries
 
 ## Author
 

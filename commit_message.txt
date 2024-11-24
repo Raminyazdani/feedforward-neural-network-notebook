@@ -1,17 +1,20 @@
-Ramin Yazdani | Feedforward Neural Network Classifier | main | WIP(data): Implement PyTorch DataLoader infrastructure
+Ramin Yazdani | Feedforward Neural Network Classifier | main | WIP(model): Define neural network architecture
 
-Implemented PyTorch data handling infrastructure following framework best practices.
-This enables efficient batch processing and follows PyTorch conventions for dataset management.
+Designed the 2-layer feedforward neural network class structure using PyTorch's nn.Module.
+This establishes the model architecture that will learn non-linear decision boundaries.
 
 Key implementations:
-- Created PointsDataset class extending torch.utils.data.Dataset
-- Created PointsDataLoader class extending torch.utils.data.DataLoader
-- Added proper tensor conversions (numpy arrays → torch tensors)
-- Tested batch processing to ensure data flows correctly
+- Created FFNN class extending nn.Module
+- Defined network layers: fc1 (input → hidden) and fc2 (hidden → output)
+- Added __init__ method with configurable input, hidden, and output dimensions
+- Documented architecture design decisions in notebook
 
-Using PyTorch's Dataset and DataLoader abstractions makes the training code cleaner and
-enables features like shuffling, batching, and parallel data loading. This is a standard
-pattern in PyTorch development and makes the code more maintainable.
+The architecture consists of:
+- Input layer: 2 dimensions (x, y coordinates)
+- Hidden layer: Configurable size (default 64 neurons)
+- Output layer: 3 dimensions (one per class)
 
-Verification: DataLoader successfully creates batches from generated data. Batch shapes
-and types verified to be correct for neural network input.
+A 2-layer network with non-linear activation can approximate complex decision boundaries,
+making it suitable for this non-linearly separable classification problem.
+
+Verification: FFNN class instantiates correctly with specified dimensions.

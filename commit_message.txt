@@ -1,20 +1,18 @@
-Ramin Yazdani | Feedforward Neural Network Classifier | main | WIP(model): Define neural network architecture
+Ramin Yazdani | Feedforward Neural Network Classifier | main | WIP(model): Implement forward pass with ReLU activation
 
-Designed the 2-layer feedforward neural network class structure using PyTorch's nn.Module.
-This establishes the model architecture that will learn non-linear decision boundaries.
+Completed the forward pass logic with ReLU activation function between layers.
+This is where the network gains the ability to learn non-linear patterns.
 
 Key implementations:
-- Created FFNN class extending nn.Module
-- Defined network layers: fc1 (input → hidden) and fc2 (hidden → output)
-- Added __init__ method with configurable input, hidden, and output dimensions
-- Documented architecture design decisions in notebook
+- Implemented forward() method in FFNN class
+- Added ReLU activation after the first fully connected layer
+- Ensured proper tensor flow: input → fc1 → ReLU → fc2 → output
+- Verified output dimensions match expected class count
 
-The architecture consists of:
-- Input layer: 2 dimensions (x, y coordinates)
-- Hidden layer: Configurable size (default 64 neurons)
-- Output layer: 3 dimensions (one per class)
+The ReLU (Rectified Linear Unit) activation introduces non-linearity into the network.
+Without this non-linear activation, the multi-layer network would collapse to a simple
+linear transformation, unable to learn complex decision boundaries. ReLU is chosen for
+its computational efficiency and effectiveness in deep learning.
 
-A 2-layer network with non-linear activation can approximate complex decision boundaries,
-making it suitable for this non-linearly separable classification problem.
-
-Verification: FFNN class instantiates correctly with specified dimensions.
+Verification: Forward pass produces correct output shape (batch_size, 3) for 3 classes.
+Tested with sample input to ensure tensors flow correctly through the network.

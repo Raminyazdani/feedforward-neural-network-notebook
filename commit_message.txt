@@ -1,18 +1,23 @@
-Ramin Yazdani | Feedforward Neural Network Classifier | main | WIP(model): Implement forward pass with ReLU activation
+Ramin Yazdani | Feedforward Neural Network Classifier | main | WIP(training): Implement core training loop structure
 
-Completed the forward pass logic with ReLU activation function between layers.
-This is where the network gains the ability to learn non-linear patterns.
+Created the training function with the basic training loop structure, loss computation,
+and backpropagation. This implements the fundamental training mechanics.
 
 Key implementations:
-- Implemented forward() method in FFNN class
-- Added ReLU activation after the first fully connected layer
-- Ensured proper tensor flow: input → fc1 → ReLU → fc2 → output
-- Verified output dimensions match expected class count
+- Created train() function with epoch loop
+- Added CrossEntropyLoss as the loss function (standard for multi-class classification)
+- Implemented backpropagation with loss.backward()
+- Added optimizer.step() for parameter updates
+- Set up basic epoch iteration structure
 
-The ReLU (Rectified Linear Unit) activation introduces non-linearity into the network.
-Without this non-linear activation, the multi-layer network would collapse to a simple
-linear transformation, unable to learn complex decision boundaries. ReLU is chosen for
-its computational efficiency and effectiveness in deep learning.
+The training loop follows the standard PyTorch pattern:
+1. Forward pass through the network
+2. Compute loss using CrossEntropyLoss
+3. Backward pass to compute gradients
+4. Optimizer step to update weights
 
-Verification: Forward pass produces correct output shape (batch_size, 3) for 3 classes.
-Tested with sample input to ensure tensors flow correctly through the network.
+CrossEntropyLoss is chosen because it combines LogSoftmax and NLLLoss, making it ideal
+for multi-class classification problems.
+
+Verification: Training loop structure is complete and follows PyTorch best practices.
+Ready for metrics tracking and optimizer configuration.

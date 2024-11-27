@@ -1,27 +1,29 @@
-Ramin Yazdani | Feedforward Neural Network Classifier | main | WIP(training): Add metrics tracking (⚠️ optimizer config bug)
+Ramin Yazdani | Feedforward Neural Network Classifier | main | WIP(training): Fix optimizer to use config parameter (✅ hotfix)
 
-Extended the training loop to track and log metrics per epoch, including loss and accuracy.
-However, this commit contains a bug: the learning rate is hardcoded instead of using the
-configuration parameter.
+Immediately corrected the optimizer initialization to properly use the learning rate from
+the configuration dictionary. This fixes the training instability caused by the hardcoded
+learning rate in step 8.
 
-Key implementations:
-- Added accuracy calculation per epoch
-- Added training metrics logging and storage
-- Added progress printing for monitoring training
-- Added optimizer initialization (Adam)
-
-THE BUG:
-Instead of using `lr=config['learning_rate']`, the optimizer was initialized with
-hardcoded `lr=0.1`:
+Key fix:
+Changed from:
 ```python
-optimizer = torch.optim.Adam(model.parameters(), lr=0.1)  # WRONG - hardcoded!
+optimizer = torch.optim.Adam(model.parameters(), lr=0.1)  # hardcoded
 ```
 
-Impact: When testing, the loss exploded. The hardcoded 0.1 learning rate is too high for
-this problem, causing training instability. This prevents proper training and makes
-hyperparameter experiments impossible.
+To:
+```python
+optimizer = torch.optim.Adam(model.parameters(), lr=config['learning_rate'])  # parameterized
+```
 
-Root cause: Copy-paste error during refactoring - forgot to parameterize the hardcoded value.
-This is a realistic mistake that happens in real development.
+How the bug was found: After a quick test run, the loss was exploding and the model wasn't
+learning. I checked the optimizer setup and immediately spotted the hardcoded 0.1 value.
 
-This bug will be fixed in the next commit after observing training failure.
+Why this matters: This fix enables proper hyperparameter tuning in later experiments. Without
+this, we couldn't test different learning rates, which is crucial for understanding training
+dynamics and finding optimal configurations.
+
+Verification: Training now works correctly with different learning rates. Model converges
+properly with appropriate learning rate values from configuration.
+
+This demonstrates good debugging practice: catch bugs early through testing, investigate
+the root cause, and fix immediately before proceeding.

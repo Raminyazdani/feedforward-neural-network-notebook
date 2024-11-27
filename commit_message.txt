@@ -1,23 +1,27 @@
-Ramin Yazdani | Feedforward Neural Network Classifier | main | WIP(training): Implement core training loop structure
+Ramin Yazdani | Feedforward Neural Network Classifier | main | WIP(training): Add metrics tracking (⚠️ optimizer config bug)
 
-Created the training function with the basic training loop structure, loss computation,
-and backpropagation. This implements the fundamental training mechanics.
+Extended the training loop to track and log metrics per epoch, including loss and accuracy.
+However, this commit contains a bug: the learning rate is hardcoded instead of using the
+configuration parameter.
 
 Key implementations:
-- Created train() function with epoch loop
-- Added CrossEntropyLoss as the loss function (standard for multi-class classification)
-- Implemented backpropagation with loss.backward()
-- Added optimizer.step() for parameter updates
-- Set up basic epoch iteration structure
+- Added accuracy calculation per epoch
+- Added training metrics logging and storage
+- Added progress printing for monitoring training
+- Added optimizer initialization (Adam)
 
-The training loop follows the standard PyTorch pattern:
-1. Forward pass through the network
-2. Compute loss using CrossEntropyLoss
-3. Backward pass to compute gradients
-4. Optimizer step to update weights
+THE BUG:
+Instead of using `lr=config['learning_rate']`, the optimizer was initialized with
+hardcoded `lr=0.1`:
+```python
+optimizer = torch.optim.Adam(model.parameters(), lr=0.1)  # WRONG - hardcoded!
+```
 
-CrossEntropyLoss is chosen because it combines LogSoftmax and NLLLoss, making it ideal
-for multi-class classification problems.
+Impact: When testing, the loss exploded. The hardcoded 0.1 learning rate is too high for
+this problem, causing training instability. This prevents proper training and makes
+hyperparameter experiments impossible.
 
-Verification: Training loop structure is complete and follows PyTorch best practices.
-Ready for metrics tracking and optimizer configuration.
+Root cause: Copy-paste error during refactoring - forgot to parameterize the hardcoded value.
+This is a realistic mistake that happens in real development.
+
+This bug will be fixed in the next commit after observing training failure.

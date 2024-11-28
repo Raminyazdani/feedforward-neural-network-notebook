@@ -4,22 +4,20 @@ A PyTorch implementation for multi-class classification using feedforward neural
 
 ## Progress
 
-✅ Data generation and visualization
-✅ PyTorch DataLoader
-✅ 2-layer FFNN architecture
-✅ Training loop with backpropagation
+✅ Complete implementation with visualization
+✅ Decision boundary plotting function
 
-## Training Features
+## Features
 
-- Adam optimizer
-- Cross-entropy loss
-- Configurable hyperparameters
-- Per-epoch metrics (loss and accuracy)
+- 2-layer feedforward neural network
+- Training with Adam optimizer
+- Decision boundary visualization
+- Real-time training metrics
 
 ## Next Steps
 
-- Add decision boundary visualization
-- Run training experiments
+- Run baseline training experiment
+- Test different hyperparameters
 
 ## Author
 

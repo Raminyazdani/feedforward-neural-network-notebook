@@ -1,29 +1,26 @@
-Ramin Yazdani | Feedforward Neural Network Classifier | main | WIP(training): Fix optimizer to use config parameter (✅ hotfix)
+Ramin Yazdani | Feedforward Neural Network Classifier | main | WIP(visualization): Add decision boundary visualization
 
-Immediately corrected the optimizer initialization to properly use the learning rate from
-the configuration dictionary. This fixes the training instability caused by the hardcoded
-learning rate in step 8.
+Implemented decision boundary plotting to visualize what the network learns. This is crucial
+for understanding the model's behavior and verifying it correctly separates the three classes.
 
-Key fix:
-Changed from:
-```python
-optimizer = torch.optim.Adam(model.parameters(), lr=0.1)  # hardcoded
-```
+Key implementations:
+- Created plot_decision_boundary() function
+- Generated mesh grid covering the 2D feature space
+- Color-coded classification regions for each class
+- Overlaid actual training data points on the decision boundaries
+- Added contour lines showing class boundaries
 
-To:
-```python
-optimizer = torch.optim.Adam(model.parameters(), lr=config['learning_rate'])  # parameterized
-```
+The visualization works by:
+1. Creating a dense grid of points across the 2D space
+2. Running each grid point through the trained model
+3. Color-coding regions based on predicted class
+4. Overlaying the actual training data as scatter points
 
-How the bug was found: After a quick test run, the loss was exploding and the model wasn't
-learning. I checked the optimizer setup and immediately spotted the hardcoded 0.1 value.
+This allows us to see:
+- How well the network separates the three classes
+- Whether decision boundaries are smooth or jagged
+- If the network is overfitting or generalizing well
+- The shape and complexity of learned boundaries
 
-Why this matters: This fix enables proper hyperparameter tuning in later experiments. Without
-this, we couldn't test different learning rates, which is crucial for understanding training
-dynamics and finding optimal configurations.
-
-Verification: Training now works correctly with different learning rates. Model converges
-properly with appropriate learning rate values from configuration.
-
-This demonstrates good debugging practice: catch bugs early through testing, investigate
-the root cause, and fix immediately before proceeding.
+Verification: Decision boundary plot displays correctly with three distinct regions.
+Boundaries visually match the non-linear class distributions in the training data.

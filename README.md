@@ -4,20 +4,20 @@ A PyTorch implementation for multi-class classification using feedforward neural
 
 ## Progress
 
-✅ Complete implementation with visualization
-✅ Decision boundary plotting function
+✅ Complete implementation
+✅ Baseline training completed
+✅ Decision boundaries visualized
 
-## Features
+## Results
 
-- 2-layer feedforward neural network
-- Training with Adam optimizer
-- Decision boundary visualization
-- Real-time training metrics
+- Baseline configuration (config_0)
+- Successfully trained to ~80-90% accuracy
+- Clear decision boundaries learned
 
 ## Next Steps
 
-- Run baseline training experiment
-- Test different hyperparameters
+- Experiment with different hyperparameters
+- Compare configurations
 
 ## Author
 

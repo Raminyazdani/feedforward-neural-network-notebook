@@ -1,26 +1,30 @@
-Ramin Yazdani | Feedforward Neural Network Classifier | main | WIP(visualization): Add decision boundary visualization
+Ramin Yazdani | Feedforward Neural Network Classifier | main | WIP(experiments): Run baseline training experiment
 
-Implemented decision boundary plotting to visualize what the network learns. This is crucial
-for understanding the model's behavior and verifying it correctly separates the three classes.
+Conducted the first complete training experiment with baseline hyperparameters to establish
+reference performance. This baseline is critical for comparing future experiments.
 
-Key implementations:
-- Created plot_decision_boundary() function
-- Generated mesh grid covering the 2D feature space
-- Color-coded classification regions for each class
-- Overlaid actual training data points on the decision boundaries
-- Added contour lines showing class boundaries
+Baseline configuration (config_0):
+- Learning rate: 0.01
+- Hidden dimensions: 64
+- Epochs: 100
+- Batch size: 32
 
-The visualization works by:
-1. Creating a dense grid of points across the 2D space
-2. Running each grid point through the trained model
-3. Color-coding regions based on predicted class
-4. Overlaying the actual training data as scatter points
+Key results documented:
+- Training loss curve (convergence behavior over epochs)
+- Training accuracy curve (learning progression)
+- Final decision boundaries visualization
+- Observed patterns and model behavior
 
-This allows us to see:
-- How well the network separates the three classes
-- Whether decision boundaries are smooth or jagged
-- If the network is overfitting or generalizing well
-- The shape and complexity of learned boundaries
+Observations from baseline:
+- Model converges smoothly with this learning rate
+- Achieves good separation of the three classes
+- Decision boundaries look reasonable and smooth
+- No signs of severe overfitting or underfitting
 
-Verification: Decision boundary plot displays correctly with three distinct regions.
-Boundaries visually match the non-linear class distributions in the training data.
+Why establish a baseline: Before experimenting with hyperparameters, we need a reference
+point. The baseline shows what "normal" training looks like with reasonable default values.
+Future experiments will be compared against this baseline to understand how different
+hyperparameters affect performance.
+
+Verification: Training completed successfully. Loss decreased consistently, accuracy improved,
+and decision boundaries correctly separate the three spiral classes.

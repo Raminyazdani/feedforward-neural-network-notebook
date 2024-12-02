@@ -1,29 +1,33 @@
-Ramin Yazdani | Feedforward Neural Network Classifier | main | WIP(experiments): Test lower learning rate (config_1)
+Ramin Yazdani | Feedforward Neural Network Classifier | main | WIP(experiments): Test high learning rate (config_2)
 
-Experimented with a lower learning rate to understand its impact on training dynamics
-and convergence behavior. This helps identify the learning rate's role in optimization.
+Experimented with a very high learning rate to demonstrate training failure and understand
+the consequences of poor hyperparameter choices. This shows what doesn't work and why.
 
-Configuration 1 (config_1):
-- Learning rate: 0.001 (10× lower than baseline)
+Configuration 2 (config_2):
+- Learning rate: 0.5 (50× higher than baseline)
 - Hidden dimensions: 64 (same as baseline)
 - Epochs: 100
 - Batch size: 32
 
 Key observations documented:
-- Slower convergence compared to baseline
-- More stable training with less oscillation
-- Requires more epochs to reach similar performance
-- Final decision boundaries similar to baseline but took longer to achieve
+- Training instability with oscillating loss
+- Poor convergence or divergence
+- Model fails to learn effectively
+- Erratic decision boundaries that don't properly separate classes
 
 Analysis:
-A lower learning rate makes smaller weight updates per iteration. This leads to:
-- Pros: More stable training, less risk of overshooting minima
-- Cons: Slower convergence, may require more training time
-- Trade-off: Stability vs. speed
+A learning rate that's too high causes:
+- Large weight updates that overshoot optimal values
+- Loss oscillating or even exploding
+- Inability to converge to a good solution
+- Unstable gradients leading to poor performance
 
-Comparison to baseline: While the lower learning rate is safer and more stable, it requires
-more computational time to achieve similar results. For this problem, the baseline learning
-rate (0.01) appears to offer a good balance between stability and convergence speed.
+Why document failure: Understanding what doesn't work is as valuable as knowing what does.
+This experiment demonstrates:
+1. Hyperparameters matter significantly
+2. Learning rate sensitivity in neural networks
+3. How to diagnose training problems through loss curves
+4. The importance of proper hyperparameter tuning
 
-Verification: Training completed successfully with expected slower but stable convergence.
-Decision boundaries eventually match baseline quality.
+Verification: Training completed but with expected poor results. Loss curves show
+instability, confirming the learning rate is too high for this problem.

@@ -2,28 +2,38 @@
 
 A PyTorch implementation for multi-class classification using feedforward neural networks.
 
-## Progress
+## Overview
 
-✅ Complete implementation
-✅ Multiple training experiments
-✅ Hyperparameter analysis
+This project implements a 2-layer feedforward neural network to solve classification problems that are not linearly separable.
 
-## Experiments Completed
+## Features
 
-1. Baseline (config_0)
-2. Lower learning rate (config_1) 
-3. High learning rate (config_2)
+- Synthetic data generation (3 classes, 2D space)
+- PyTorch implementation
+- Training with backpropagation
+- Decision boundary visualization
+- Hyperparameter experiments
 
-## Observations
+## Setup
 
-- Learning rate significantly impacts convergence
-- Hidden layer size affects model capacity
-- Trade-offs between stability and speed
+```bash
+pip install -r requirements.txt
+jupyter notebook feedforward_neural_network.ipynb
+```
 
-## Next Steps
+## Results
 
-- Add comprehensive documentation
-- Polish for portfolio
+- Successfully classifies non-linearly separable data
+- Achieves 80-90% accuracy
+- Clear decision boundary visualization
+- Hyperparameter sensitivity analysis
+
+## Tech Stack
+
+- Python 3.x
+- PyTorch
+- NumPy
+- Matplotlib
 
 ## Author
 

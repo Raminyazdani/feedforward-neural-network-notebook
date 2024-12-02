@@ -5,19 +5,25 @@ A PyTorch implementation for multi-class classification using feedforward neural
 ## Progress
 
 ✅ Complete implementation
-✅ Baseline training completed
-✅ Decision boundaries visualized
+✅ Multiple training experiments
+✅ Hyperparameter analysis
 
-## Results
+## Experiments Completed
 
-- Baseline configuration (config_0)
-- Successfully trained to ~80-90% accuracy
-- Clear decision boundaries learned
+1. Baseline (config_0)
+2. Lower learning rate (config_1) 
+3. High learning rate (config_2)
+
+## Observations
+
+- Learning rate significantly impacts convergence
+- Hidden layer size affects model capacity
+- Trade-offs between stability and speed
 
 ## Next Steps
 
-- Experiment with different hyperparameters
-- Compare configurations
+- Add comprehensive documentation
+- Polish for portfolio
 
 ## Author
 

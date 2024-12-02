@@ -1,30 +1,29 @@
-Ramin Yazdani | Feedforward Neural Network Classifier | main | WIP(experiments): Run baseline training experiment
+Ramin Yazdani | Feedforward Neural Network Classifier | main | WIP(experiments): Test lower learning rate (config_1)
 
-Conducted the first complete training experiment with baseline hyperparameters to establish
-reference performance. This baseline is critical for comparing future experiments.
+Experimented with a lower learning rate to understand its impact on training dynamics
+and convergence behavior. This helps identify the learning rate's role in optimization.
 
-Baseline configuration (config_0):
-- Learning rate: 0.01
-- Hidden dimensions: 64
+Configuration 1 (config_1):
+- Learning rate: 0.001 (10× lower than baseline)
+- Hidden dimensions: 64 (same as baseline)
 - Epochs: 100
 - Batch size: 32
 
-Key results documented:
-- Training loss curve (convergence behavior over epochs)
-- Training accuracy curve (learning progression)
-- Final decision boundaries visualization
-- Observed patterns and model behavior
+Key observations documented:
+- Slower convergence compared to baseline
+- More stable training with less oscillation
+- Requires more epochs to reach similar performance
+- Final decision boundaries similar to baseline but took longer to achieve
 
-Observations from baseline:
-- Model converges smoothly with this learning rate
-- Achieves good separation of the three classes
-- Decision boundaries look reasonable and smooth
-- No signs of severe overfitting or underfitting
+Analysis:
+A lower learning rate makes smaller weight updates per iteration. This leads to:
+- Pros: More stable training, less risk of overshooting minima
+- Cons: Slower convergence, may require more training time
+- Trade-off: Stability vs. speed
 
-Why establish a baseline: Before experimenting with hyperparameters, we need a reference
-point. The baseline shows what "normal" training looks like with reasonable default values.
-Future experiments will be compared against this baseline to understand how different
-hyperparameters affect performance.
+Comparison to baseline: While the lower learning rate is safer and more stable, it requires
+more computational time to achieve similar results. For this problem, the baseline learning
+rate (0.01) appears to offer a good balance between stability and convergence speed.
 
-Verification: Training completed successfully. Loss decreased consistently, accuracy improved,
-and decision boundaries correctly separate the three spiral classes.
+Verification: Training completed successfully with expected slower but stable convergence.
+Decision boundaries eventually match baseline quality.

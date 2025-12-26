@@ -2,20 +2,20 @@
 # Format: TYPE	FILE	LOCATOR	BEFORE_SNIPPET	PROPOSED_CHANGE	RATIONALE	STATUS
 # STATUS: APPLIED or NOT_APPLIED (with reason)
 
-TRACE	README.md	line 1	# NNTI Assignment 6 FFNN	# Feedforward Neural Network Classifier	Remove assignment language from title	PENDING
-TRACE	README.md	line 3	**Project Type:** University Assignment/Task	Remove line entirely	Remove explicit assignment designation	PENDING
-TRACE	README.md	line 8	This is Assignment 6 for the Neural Networks and Their Implementation (NNTI) course	Rewrite to professional description	Remove course/assignment reference	PENDING
-TRACE	README.md	line 21	Submission_6_-_7072982_Syed_Rumman_Ali/	Remove folder reference	Non-existent folder with student ID	PENDING
-TRACE	README.md	line 41	cd Submission_6_-_7072982_Syed_Rumman_Ali	Remove or fix command	References non-existent folder	PENDING
-RENAME	FFNN_(1).ipynb	filename	FFNN_(1).ipynb	feedforward_neural_network.ipynb	Remove parentheses, more descriptive name	PENDING
-TRACE	FFNN_(1).ipynb	cell[0] (markdown)	# Exercise 5.4 - Feedforward Neural Network (3 points)	# Feedforward Neural Network Classifier	Remove exercise number and point value	PENDING
-TRACE	FFNN_(1).ipynb	cell[1] (markdown)	In the lecture, you were introduced to...In this practical exercise	Reframe without lecture/exercise language	Remove academic context references	PENDING
-TRACE	FFNN_(1).ipynb	cell[9] (markdown)	## 5.4.1 DataLoader (0.5 points)	## DataLoader Implementation	Remove section number and point value	PENDING
-TRACE	FFNN_(1).ipynb	cell[12] (markdown)	## 5.4.2 Building our 2-layer neural network (0.5 points)	## Building the Neural Network	Remove section number and point value	PENDING
-TRACE	FFNN_(1).ipynb	cell[14] (markdown)	In this exercise, you are required to complete	Reframe as implementation explanation	Remove exercise/requirement language	PENDING
-TRACE	FFNN_(1).ipynb	cell[16] (markdown)	## 5.4.3 Train our model (1 point)	## Training the Model	Remove section number and point value	PENDING
-TRACE	FFNN_(1).ipynb	cell[21] (markdown)	To complete this exercise, you can refer	Reframe as reference/resource	Remove exercise language	PENDING
-TRACE	FFNN_(1).ipynb	cell[24] (markdown)	## 5.4.4 Let's do some experiments. (1 point)	## Hyperparameter Experiments	Remove section number and point value	PENDING
-TRACE	FFNN_(1).ipynb	cell[25] (markdown)	<b> (0.5 points) Train the model again...	Remove point notation	Keep instruction, remove point value	PENDING
-TRACE	FFNN_(1).ipynb	cell[31] (markdown)	<b> (0.5 points) Train the model again...	Remove point notation	Keep instruction, remove point value	PENDING
-DOC	README.md	entire file	Assignment-focused structure	Portfolio-grade professional structure	Needs complete restructure per template	PENDING
+TRACE	README.md	line 1	# NNTI Assignment 6 FFNN	# Feedforward Neural Network Classifier	Remove assignment language from title	APPLIED
+TRACE	README.md	line 3	**Project Type:** University Assignment/Task	Remove line entirely	Remove explicit assignment designation	APPLIED
+TRACE	README.md	line 8	This is Assignment 6 for the Neural Networks and Their Implementation (NNTI) course	Rewrite to professional description	Remove course/assignment reference	APPLIED
+TRACE	README.md	line 21	Submission_6_-_7072982_Syed_Rumman_Ali/	Remove folder reference	Non-existent folder with student ID	APPLIED
+TRACE	README.md	line 41	cd Submission_6_-_7072982_Syed_Rumman_Ali	Remove or fix command	References non-existent folder	APPLIED
+DOC	README.md	entire file	Assignment-focused structure	Portfolio-grade professional structure	Needs complete restructure per template	APPLIED
+RENAME	FFNN_(1).ipynb	filename	FFNN_(1).ipynb	feedforward_neural_network.ipynb	Remove parentheses, more descriptive name	APPLIED
+TRACE	FFNN_(1).ipynb	cell[0] (markdown)	# Exercise 5.4 - Feedforward Neural Network (3 points)	# Feedforward Neural Network Classifier	Remove exercise number and point value	APPLIED
+TRACE	FFNN_(1).ipynb	cell[1] (markdown)	In the lecture, you were introduced to...In this practical exercise	Reframe without lecture/exercise language	Remove academic context references	APPLIED
+TRACE	FFNN_(1).ipynb	cell[9] (markdown)	## 5.4.1 DataLoader (0.5 points)	## DataLoader Implementation	Remove section number and point value	APPLIED
+TRACE	FFNN_(1).ipynb	cell[12] (markdown)	## 5.4.2 Building our 2-layer neural network (0.5 points)	## Building the Neural Network	Remove section number and point value	APPLIED
+TRACE	FFNN_(1).ipynb	cell[14] (markdown)	In this exercise, you are required to complete	Reframe as implementation explanation	Remove exercise/requirement language	APPLIED
+TRACE	FFNN_(1).ipynb	cell[16] (markdown)	## 5.4.3 Train our model (1 point)	## Training the Model	Remove section number and point value	APPLIED
+TRACE	FFNN_(1).ipynb	cell[21] (markdown)	To complete this exercise, you can refer	Reframe as reference/resource	Remove exercise language	APPLIED
+TRACE	FFNN_(1).ipynb	cell[24] (markdown)	## 5.4.4 Let's do some experiments. (1 point)	## Hyperparameter Experiments	Remove section number and point value	APPLIED
+TRACE	FFNN_(1).ipynb	cell[25] (markdown)	<b> (0.5 points) Train the model again...	Remove point notation	Keep instruction, remove point value	APPLIED
+TRACE	FFNN_(1).ipynb	cell[31] (markdown)	<b> (0.5 points) Train the model again...	Remove point notation	Keep instruction, remove point value	APPLIED

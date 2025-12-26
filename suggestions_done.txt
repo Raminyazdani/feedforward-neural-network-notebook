@@ -1,0 +1,15 @@
+# Applied Changes Ledger
+# Format: FILE	LOCATOR	BEFORE_SNIPPET	AFTER_SNIPPET	NOTES
+
+README.md entire file# NNTI Assignment 6 FFNN [assignment-focused content]# Feedforward Neural Network Classifier [portfolio-grade professional content]Complete rewrite: removed all assignment traces, added comprehensive professional documentation with setup, usage, troubleshooting, and reproducibility sections
+FFNN_(1).ipynbfilenameFFNN_(1).ipynbfeedforward_neural_network.ipynbRenamed file to remove parentheses and use descriptive snake_case naming
+feedforward_neural_network.ipynb cell[0] (markdown)# Exercise 5.4 - Feedforward Neural Network (3 points)# Feedforward Neural Network ClassifierRemoved exercise number and point value from title
+feedforward_neural_network.ipynb cell[1] (markdown)In the lecture, you were introduced to...In this practical exerciseThis notebook demonstrates how feedforward neural networks can solve classification problems...Reframed without lecture/exercise language
+feedforward_neural_network.ipynb cell[9] (markdown)## 5.4.1 DataLoader (0.5 points)## DataLoader ImplementationRemoved section number and point value
+feedforward_neural_network.ipynb cell[12] (markdown)## 5.4.2 Building our 2-layer neural network (0.5 points)## Building the Neural NetworkRemoved section number and point value
+feedforward_neural_network.ipynb cell[14] (markdown)In this exercise, you are required to completeThis implementation builds a modelRemoved exercise/requirement language
+feedforward_neural_network.ipynb cell[16] (markdown)## 5.4.3 Train our model (1 point)## Training the ModelRemoved section number and point value
+feedforward_neural_network.ipynb cell[21] (markdown)To complete this exercise, you can referFor more details, refer toRemoved exercise language
+feedforward_neural_network.ipynb cell[24] (markdown)## 5.4.4 Let's do some experiments. (1 point)## Hyperparameter ExperimentsRemoved section number and point value
+feedforward_neural_network.ipynb cell[25] (markdown)<b> (0.5 points) Train the model again<b>Train the model againRemoved point notation
+feedforward_neural_network.ipynb cell[31] (markdown)<b> (0.5 points) Train the model again<b>Train the model againRemoved point notation

@@ -4,26 +4,22 @@ A PyTorch implementation for multi-class classification using feedforward neural
 
 ## Progress
 
-✅ Complete implementation
-✅ Multiple training experiments
-✅ Hyperparameter analysis
+✅ Data generation and visualization
+✅ PyTorch DataLoader
+✅ 2-layer FFNN architecture
+✅ Training loop with backpropagation
 
-## Experiments Completed
+## Training Features
 
-1. Baseline (config_0)
-2. Lower learning rate (config_1) 
-3. High learning rate (config_2)
-
-## Observations
-
-- Learning rate significantly impacts convergence
-- Hidden layer size affects model capacity
-- Trade-offs between stability and speed
+- Adam optimizer
+- Cross-entropy loss
+- Configurable hyperparameters
+- Per-epoch metrics (loss and accuracy)
 
 ## Next Steps
 
-- Add comprehensive documentation
-- Polish for portfolio
+- Add decision boundary visualization
+- Run training experiments
 
 ## Author
 
